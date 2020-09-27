@@ -1,0 +1,64 @@
+{
+    "events": [
+       {
+        "id": 1,
+        "location": "Bratislava, SK",
+        "title": "Night in the City",
+        "image": "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2452&q=80",
+        "description": "Slovakia's capital since the country's independence in 1993, Bratislava is a mosaic of illustrious history: a medieval and Gothic old town, baroque palaces commissioned by Hungarian nobles, and the crowning castle, rebuilt to Renaissance finery. Slicing through the city are stark-angled, communist-era blocks and a futurist bridge. Recent years have added a cast of outlandish statues, boutiques and modish cafes, eagerly sought out by visiting stag party groups and day trippers from Vienna. Many arrive purely to enjoy the uproarious nightlife, from rowdy beer halls to hidden nightclubs.",
+        "shortInfo": "Let's go out!",
+        "timeFrom": "14:00",
+        "timeTo": "18:00"
+      },
+      {
+        "id": 2,
+        "location": "New York, US",
+        "title": "Batman Screening",
+        "image": "https://images.unsplash.com/photo-1526906004573-b4a4fcd642fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+        "description": "One of the most iconic fictional characters in the world, Batman has dedicated his life to an endless crusade, a war on all criminals in the name of his murdered parents, who were taken from him when he was just a child. Since that tragic night, he has trained his body and mind to near physical perfection to be a self-made Super Hero. He's developed an arsenal of technology that would put most armies to shame. And he's assembled teams of his fellow DC Super Heroes, like the Justice League, the Outsiders and Batman, Incorporated.",
+        "shortInfo": "Batman premiere tomorrow!",
+        "timeFrom": "08:00",
+        "timeTo": "10:00"
+      },
+      {
+        "id": 3,
+        "location": "Lisbon, PT",
+        "title": "Cycling in Almada",
+        "image": "https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2389&q=80",
+        "description": "Human presence in the area of Almada dates to the end of the Neolithic period about 5000 years ago; archeological excavations performed in the municipality suggest that non-sedentary nomadic tribes may have occupied this location sporadically. The gradual development of settlement here made its greatest advance with the coming of Islamic civilization, when Muslims constructed a fort at Almada to defend and monitor the entrance to the Tagus River.",
+        "shortInfo": "Very nice trip in Portugal",
+        "timeFrom": "08:00",
+        "timeTo": "10:00"
+      },
+      {
+        "id": 4,
+        "location": "Los Angeles, US",
+        "title": "New Aquaman",
+        "image": "https://images.unsplash.com/photo-1512136146408-dab5f2ba8ebb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
+        "description": "An action-packed adventure that spans the vast, visually breathtaking underwater world of the seven seas, “Aquaman” reveals the origin story of half-human, half-Atlantean Arthur Curry and takes him on the journey of his lifetime—one that will not only force him to face who he really is, but to discover if he is worthy of who he was born to be…a king.",
+        "shortInfo": "Let's go watch new Aquaman",
+        "timeFrom": "08:00",
+        "timeTo": "10:00"
+      },
+      {
+        "id": 5,
+        "location": "Berlin, GE",
+        "title": "Burger Festival",
+        "image": "https://images.unsplash.com/photo-1536510233921-8e5043fce771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1671&q=80",
+        "description": "BurgerFest is located along Main and Buffalo Streets and in the Village of Hamburg Municipal Parking Lot. The Taste of Hamburg portion of the festival features the favorite offerings of area restaurants, in the parking lot.  The one-day festival has something for everyone, from Kids Space children’s inflatable rides and activities; an arts and crafts show and sale, the Classic Car Show and the Beer Tent.",
+        "shortInfo": "Burger Festival in the Town!",
+        "timeFrom": "08:00",
+        "timeTo": "10:00"
+      },
+      {
+        "id": 6,
+        "location": "London, UK",
+        "title": "London Marathon",
+        "image": "https://images.unsplash.com/photo-1513276193780-64b881470da8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+        "description": "In a nod to Greek history, the first marathon commemorated the run of the soldier Pheidippides from a battlefield near the town of Marathon, Greece, to Athens in 490 B.C. According to legend, Pheidippides ran the approximately 25 miles to announce the defeat of the Persians to some anxious Athenians.",
+        "shortInfo": "Little bit of exercise!",
+        "timeFrom": "08:00",
+        "timeTo": "10:00"
+      }
+    ]
+  }

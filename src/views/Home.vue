@@ -1,16 +1,20 @@
 <template>
   <div class="home">
-  app
+
+      <h1>Join and create your own event</h1>
+    <img src="../assets/bg.jpg" alt="" srcset="">
   </div>
 </template>
 
 <script>
-
-
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-  
-  }
-}
+  },
+};
 </script>
+
+<style scoped>
+
+</style>
+
