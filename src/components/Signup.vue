@@ -21,7 +21,7 @@
 			<input type="submit" value="Register" id="submit">
 		</p>
     <div class="msg" v-if="submitted">Thank you for joining us, {{ userName }}</div>
-  </div>
+
 	</form>
 </template>
 
