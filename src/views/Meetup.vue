@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <input type="text" placeholder="Search event" v-model="search" />
+   
+   <input type="text" placeholder="Search event" v-model="search" />
      <ul>
         <li v-for="event in filteredList" :key="event.id">
         <button @click="deleteEvent(event)">x</button>
@@ -12,16 +13,16 @@
         <h2>{{ event.location }}</h2>
         <h3>{{event.shortInfo}}</h3>
         <h4>{{event.timeFrom}} - {{event.timeTo}}</h4>
-
+<!-- <button @click="createEvent">create</button> -->
         </li>
       </ul>
   </div>
 </template>
 <script>
-import axios from "axios";
+//import axios from "axios"
 export default {
   name: "Meetup",
- data() {
+/*  data() {
     return {
       search: "",
       events: [],
@@ -35,8 +36,22 @@ export default {
       console.log(e);
     }
   },
+ */
+data() {
+    return {
+      msg: "Meetup",
+       search: "",
+    };
+  },
+  created() {
+    this.$store.dispatch("getData");
+  },
+  
 computed:{
-filteredList() {
+ events() {
+      return this.$store.state.events;
+    },
+    filteredList() {
       return this.events.filter((event) => {
         return event.title.toLowerCase().includes(this.search.toLowerCase());
       });
@@ -45,7 +60,10 @@ filteredList() {
 methods:{
 deleteEvent(event) {
   this.events.splice(this.events.indexOf(event), 1);
-}
+},
+  /*  createEvent(){
+         this.$router.push('/create');
+    } */
 },
 };
 </script>
@@ -78,12 +96,17 @@ h4{
   color: grey;
 }
 button{
-  background:grey;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+ /*  background:grey;
   border-radius: 50%;
   display: flex;
   float:center;
   margin-left: 34%;
   margin-top:10px;
+  z-index: 1;
+  position: relative; */
 }
 input{
   position: relative;

@@ -5,7 +5,7 @@ installed vue cli
 
 DOCKER - created docker build 
 -docker ps
--docker build -t app
+-docker build -t app .
 -docker run -it -p 8080:8080 --rm --name docker-container app
 
 HEROKU - deployed in heroku cli
