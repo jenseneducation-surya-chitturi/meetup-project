@@ -1,12 +1,20 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import VueScrollTo from "vue-scrollto";
 
-Vue.config.productionTip = false
+Vue.use(VueScrollTo);
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
-  render: h => h(App)
-}).$mount('#app')
+  created() {
+    const newEvents = JSON.parse(localStorage.getItem("newEvents"));
+    if (newEvents) {
+      store.commit("ADD_NEW_EVENTS", newEvents);
+    }
+  },
+  render: (h) => h(App),
+}).$mount("#app");

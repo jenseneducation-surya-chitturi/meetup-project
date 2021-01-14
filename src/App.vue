@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-   <Nav/>
+   <login-form />
+          <app-navbar />
+          
     </div>
     <router-view/>
   </div>
 </template>
 <script>
-import Nav from "@/components/Nav.vue";
+import AppNavbar from "@/components/AppNavbar.vue";
+import LoginForm from "@/components/LoginForm.vue";
+
 export default {
   name: "App",
   components: {
-    Nav,
+       AppNavbar,
+        LoginForm,
   },
 };
 </script>

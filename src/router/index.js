@@ -23,17 +23,12 @@ const routes = [
     path: '/event/:id',
     name: 'event',
     props: true,
-    component: () => import('@/components/Event.vue'),
+    component: () => import('@/views/Event.vue'),
   },
   {
     path: '/create',
     name: 'Create',
     component: () => import('@/components/Create.vue'),
-  },
-  {
-    path: '/signup',
-    name: 'Signup',
-    component: () => import('@/components/Signup.vue'),
   }
 ]
 

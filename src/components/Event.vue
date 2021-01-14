@@ -1,70 +1,110 @@
-<template>  
-     <div class="id" v-if="event">
-    <div class="id-content">
-        <h1 class="title">
-          {{ event.title }}
-          <span class="close" @click="$router.go(-1)">&times;</span>
-        </h1>
-         <div class="content-left">
-        <img :src="event.image" style="width:400px; height:250px;" />
-      </div>
-      <div class="content-right">
-        <p>{{ event.description }}</p>
-        <button class="signup" @click="signupDetails">Register</button>
-      </div>
+<template>
+  <article v-if="events">
+    <div class="grid">
+      <section
+        class="event-item"
+        v-for="event in events"
+        :key="event.id"
+        @click="showEvent(event)"
+      >
+        <img :src="event.img" alt="event image" />
+        <section class="event-content">
+          <h2 class="date">
+            <span class="lnr lnr-calendar-full"></span>
+            {{ event.date }}
+          </h2>
+          <p class="title">{{ event.title }}</p>
+          <p class="description">{{ event.description }}</p>
+          <p class="attendees">
+            <span class="lnr lnr-users"></span>
+            {{ event.attendees }}
+          </p>
+        </section>
+      </section>
     </div>
-  </div>
-
+  </article>
 </template>
 
 <script>
 export default {
   name: "Event",
-   props: {
-    event: {
-      type: Object,
-      default: null,
+  props: ["events"],
+  methods: {
+    showEvent(event) {
+      this.$router
+        .push({ name: "event", params: { id: event.id, event } })
+        .catch(() => {});
     },
   },
-  methods: {
-    signupDetails(){
-         this.$router.push('/signup');
-    }
-  }
 };
 </script>
 
 <style scoped>
-.id{
-  width: 900px;
-  box-shadow:-2px 0px 33px 0px rgba(0,0,0,0.75);
-display: flex;
-margin-left:200px;
-float: left;
+.grid {
+  gap: 2rem 0;
+  display: grid;
+  margin: 4rem 0;
 }
-p{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-.close{
-  display: flex;
-  float:right;
-  margin-right: 10px;
-
-        
-}
-button {
-      width: 20%;
-      border: none;
-      padding: .8rem;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 10px;
-      background: grey;
+  .event-item {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #eee;
+  }
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 5px 5px 0 0;
     }
 
+    .event-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+
+   }   .date {
+        color: #999;
+        font-size: 1rem;
+
+  }      span {
+          color: #00796b;
+        }
+
+
+      .title {
+        margin: 1rem 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .description {
+        line-height: 1.7;
+        font-size: 0.9rem;
+      }
+
+      .attendees {
+        color: #999;
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+        span {
+          font-weight: bold;
+          color: #00796b;
+        }
+
+h1 {
+  font-weight: 100;
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+      .event-item {
+        transition: 0.3s;
+      }
+        :hover {
+          box-shadow: 0 0 25px rgba(#000, 0.2);
+}
+}
 </style>

@@ -9,6 +9,8 @@ DOCKER - created docker build
 -docker run -it -p 8080:8080 --rm --name docker-container app
 
 HEROKU - deployed in heroku cli
+-heroku login
+-docker ps
 -heroku container:login
 -heroku create
 -heroku container:push web --app (name)
