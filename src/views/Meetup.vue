@@ -4,7 +4,7 @@
 
      <div class="grid">
         <section class="events" v-for="event in filteredList" :key="event.id">
-        <!-- <button @click="deleteEvent(event)">x</button> -->
+        <button @click="deleteEvent(event)">x</button>
         <img :src="event.img"
              style="width:350px; height:200px;"
              @click="$router.push({ name: 'event', params: { id: event.id, event } })"
@@ -125,6 +125,12 @@ input[type="text"]{
 h1 {
   font-weight: 100;
 }
-  
+  button{
+    position: relative;
+    top:5%;
+    left:42%;
+    background:green;
+    border-radius:50% ;
+  }
 
 </style>
